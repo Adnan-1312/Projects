@@ -1,0 +1,334 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./2808071_18346.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ff0000;
+}
+
+header {
+    width: 100%;
+    height: 5vh;
+    background: #000000ab;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgb(255, 0, 0);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: rgb(255, 0, 0);
+}
+
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 2fr 4fr;
+    gap: 20px;
+    height: 80vh;
+    width: 90vw;
+    margin-top: 2%;
+    /* border:3px solid #ff0000; */
+}
+
+/* Task input section */
+.task-input {
+    display: flex;
+    place-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40vh;
+    background: #0000007c;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-input textarea, .task-input input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.time-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 95%;
+    margin: 10px 0;
+}
+
+.time-input input {
+    width: 70%;
+}
+
+.time-input select {
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.task-input button {
+    background: #e09;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.task-input button:hover {
+    background: #c08;
+}
+
+/* Task list container */
+.tsk-lst {
+    display: flex;
+    place-self: center; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100vh;
+    /* padding: 20px; */
+    max-height: 83vh;
+    overflow-y: auto;
+    border-radius: 25px;
+    background-color: #00000084;
+    gap: 10px; /* Added gap for proper spacing between elements */
+}
+
+.srch-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50vh;
+    gap: 30px; Added gap for proper spacing
+    margin-bottom: -50%;
+}
+
+.srch-box input, .srch-box button {
+    width: calc(50% - 10px); /* Adjusted width for proper spacing */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tsk-lst input, .tsk-lst button {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Task list */
+.task-list {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    padding-top: 0px;
+    overflow-y: auto;
+    border-radius: 25px;
+    gap: 10px; /* Added gap for proper spacing between tasks */
+}
+
+.task-list::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.task {
+    background: #ff2e2e;
+    color: greenyellow;
+    width: 90%;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0; /* Added margin for spacing */
+    transition: background 0.3s;
+}
+
+.task.completed {
+    background: rgb(47, 255, 0);
+    color: red;
+    text-decoration: line-through;
+}
+
+.task button {
+    background: rgb(78, 0, 118);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background: rgb(255, 207, 75);
+}
+
+.task .time {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.task .due-time {
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+}
+
+.task .tasks-lst {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.message {
+    color: #ff0000;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 3.5vh;
+        background: #000000ab;
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgb(255, 0, 0);
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 1.5em;
+        color: rgb(255, 0, 0);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+        width: 80vw;
+    }
+
+    .task-input {
+        width: 95%;
+        height: 25vh;
+        background: #0000007c;
+        border-radius: 25px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .task-input textarea, .task-input input {
+        width: 95%;
+        padding: 6px;
+        margin: 2px 0;
+        font-size: 0.8em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .time-input input, .time-input select {
+        width: 70%;
+        padding: 6px;
+        font-size: 0.8em;
+        margin: 2px 0;
+    }
+
+    .time-input select {
+        width: 30%;
+        margin: 2px 0;
+    }
+
+    .task-input button {
+        width: auto;
+        padding: 6px 16px;
+        font-size: 0.8em;
+    }
+
+    .tsk-lst {
+        width: 100%;
+        height: 55vh;
+        background: #0000007c;
+        border-radius: 25px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .srch-box {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center;  */
+        /* justify-content: ; */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .srch-box input, .srch-box button {
+        width: 95%;
+        padding: 8px;
+        font-size: 0.8em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .task-list {
+        width: 95%;
+        height: 49vh;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .task {
+        width: 95%;
+        padding: 8px;
+        font-size: 0.8em;
+        border-radius: 15px;
+        margin: 5px 0;
+    }
+
+    .task button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .task .time, .task .due-time {
+        font-size: 0.8em;
+    }
+
+    .message {
+        font-size: 1.2em;
+    }
+}
+
+

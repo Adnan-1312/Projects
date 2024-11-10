@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <section class="task-input">          
+            <input type="date" id="task-date"></input>
+            <div class="time-input">
+                <input type="text" id="task-time" placeholder="hh:mm" maxlength="5" oninput="formatTimeInput(this)"></input>
+                <select id="task-ampm">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <input type="text" id="task-title" placeholder="Enter task title"></input>
+            <textarea id="task-desc" placeholder="Enter task description"></textarea>
+            <input type="checkbox" id="task-alarm"> Set Alarm
+            <button onclick="addTask()">Add Task</button>
+        </section>
+        <div class="tsk-lst">
+            <section class="task-search">
+                <div class="srch-box">
+                    <input type="date" id="search-date" placeholder="Enter date to search"></input>
+                    <button onclick="searchTaskByDate()">Search Task</button>
+                </div>
+            </section>
+            <section id="task-list" class="task-list"></section>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

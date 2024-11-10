@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless Mic with Effects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="audio-mixer">
+        <h1>Wireless Mic with Effects</h1>
+        <div class="container">
+        <button id="start">Start</button>
+        <button id="connect">Connect to Bluetooth Speaker</button>
+        <div class="controls">
+            <div class="control">
+                <label for="bass">Bass:</label>
+                <input type="range" id="bass" min="-10" max="10" value="0" class="knob">
+            </div>
+            <div class="control">
+                <label for="treble">Treble:</label>
+                <input type="range" id="treble" min="-10" max="10" value="0" class="knob">
+            </div>
+            <div class="control">
+                <label for="echo">Echo:</label>
+                <input type="range" id="echo" min="0" max="1" step="0.01" value="0.5" class="knob">
+            </div>
+            <div class="control">
+                <label for="delay">Delay:</label>
+                <input type="range" id="delay" min="0" max="1" step="0.01" value="0.5" class="knob">
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
